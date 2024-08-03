@@ -2,14 +2,117 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* text-align: center; */
+  background-color: rgb(240, 240, 238);
+  transition: background-color 0.5s ease;
 }
 
+/* Button styles */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: #3a3a3a;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(100, 108, 255, 0.75);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Code block styles */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* Root container styles */
+#root {
+  margin: 50px auto;
+  background: linear-gradient(135deg, rgba(219, 230, 228, 0.23), rgba(145, 101, 114, 0.5));
+  width: 700px;
+  display: block;
+  padding: 30px;
+  border-radius: 0 50px 0 50px;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.65);
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid rgba(226, 236, 235, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for root container */
+/* #root:hover {
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+  border-color: rgba(216, 226, 225, 0.75);
+} */
+
+/* Active effect for root container */
+#root:active {
+  transform: scale(1);
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.65);
+}
+
+/* Adding a subtle animation to the root container */
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.65);
+  }
+
+  50% {
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.75);
+  }
+
+  100% {
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.65);
+  }
+}
+
+#root {
+  animation: pulsate 2s infinite;
+}
+
+/* Adding a floating effect to the root container */
+/* @keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+/* #root {
+  animation: float 4s ease-in-out infinite;
+} */
+
+/* Adding a radial gradient background to the body */
+body {
+  background: radial-gradient(circle, rgba(240, 240, 238, 1) 0%, rgba(219, 230, 228, 1) 100%);
 }
