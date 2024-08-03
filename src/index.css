@@ -75,7 +75,7 @@ code {
 }
 
 /* Adding a subtle animation to the root container */
-@keyframes pulsate {
+/* @keyframes pulsate {
   0% {
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.65);
   }
@@ -87,7 +87,7 @@ code {
   100% {
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.65);
   }
-}
+} */
 
 #root {
   animation: pulsate 2s infinite;
